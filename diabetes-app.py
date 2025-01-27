@@ -6,7 +6,7 @@ import sys
 st.write(sys.executable)
 
 #membaca model 
-diabetes_model = pickle.load(open('DIabetes prediction/diabetes_model.pkl', 'rb'))
+diabetes_model = pickle.load(open('Diabetes prediction/diabetes_model.pkl', 'rb'))
 
 #judul web 
 st.title('Diabetes Prediction')
