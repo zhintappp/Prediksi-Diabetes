@@ -7,11 +7,6 @@ import sys
 print(f"Python version: {sys.version}")
 print(f"Current working directory: {os.getcwd()}")
 
-import sklearn
-print(f"Scikit-learn version: {sklearn.__version__}")
-
-
-
 # Fungsi untuk memuat model
 def load_model():
     model_path = 'diabetes_model.pkl'
