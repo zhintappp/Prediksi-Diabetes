@@ -5,7 +5,7 @@ import os
 current_path = os.getcwd()
 st.write(f"Current working directory: {current_path}")
 
-file_path = os.path.join(current_path, 'Diabetes_prediction', 'diabetes_model.pkl')
+file_path = os.path.join(current_path, 'diabetes_model.pkl')
 st.write(f"Trying to open file at: {file_path}")
 
 if os.path.exists(file_path):
