@@ -1,8 +1,21 @@
 import pickle 
 import streamlit as st 
+import os
 
+current_path = os.getcwd()
+st.write(f"Current working directory: {current_path}")
+
+file_path = os.path.join(current_path, 'Diabetes_prediction', 'diabetes_model.pkl')
+st.write(f"Trying to open file at: {file_path}")
+
+if os.path.exists(file_path):
+    st.write("File found, loading the model...")
+    diabetes_model = pickle.load(open(file_path, 'rb'))
+else:
+    st.write("File not found, please check the path and file name."
+             
 #membaca model 
-diabetes_model = pickle.load(open('Diabetes prediction/diabetes_model.pkl', 'rb'))
+#diabetes_model = pickle.load(open('Diabetes prediction/diabetes_model.pkl', 'rb'))
 
 #judul web 
 st.title('Diabetes Prediction')
