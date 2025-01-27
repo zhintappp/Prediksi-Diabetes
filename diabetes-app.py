@@ -1,15 +1,6 @@
 import pickle 
 import streamlit as st 
 
-import os
-import sklearn
-
-# Cek path lengkap ke file 'diabetes_model.pkl'
-print(os.path.abspath('diabetes_model.pkl'))
-
-# Cek versi scikit-learn
-print(sklearn.__version__)
-
 #membaca model 
 diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
 
