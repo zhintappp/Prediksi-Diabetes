@@ -2,9 +2,10 @@
 
 ## **What is Diabetes Prediction?** 💡
 
-Diabetes adalah penyakit yang dapat mempengaruhi kualitas hidup, tetapi deteksi dini dapat membantu mencegah dampak yang lebih serius. Dengan aplikasi ini, **Machine Learning** digunakan untuk memprediksi apakah seseorang berisiko terkena diabetes berdasarkan berbagai faktor medis seperti usia, BMI, tekanan darah, kadar insulin, dan banyak lagi.
+Diabetes is a disease that can affect a person's quality of life. However, if detected early, more serious effects can be prevented. This app uses **Machine Learning** and **Naive Bayes** algorithm to predict whether a person is at risk of diabetes or not, based on medical factors such as age, BMI (Body Mass Index), blood pressure, insulin levels, and others. 
 
-Menggunakan **Naive Bayes**, algoritma machine learning yang sederhana namun sangat efektif, aplikasi ini memberikan hasil prediksi apakah kamu berisiko diabetes atau tidak dengan menginput data.
+The aim of this app is to help early detection of diabetes risk so that preventive measures can be taken immediately to improve quality of life and prevent more serious complications.
+
 
 ## **Tools** 🛠️
 - Python
