@@ -2,6 +2,12 @@ import streamlit as st
 import os
 import pickle
 
+import streamlit as st
+import sklearn
+
+st.write(f"Scikit-learn version: {sklearn.__version__}")
+
+
 # Fungsi untuk memuat model
 def load_model():
     model_path = 'diabetes_model.pkl'
