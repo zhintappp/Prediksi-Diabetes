@@ -1,8 +1,9 @@
 import os
 import streamlit as st
 import pandas as pd
-
+import matplotlib
 import numpy as np
+from joblib import load
 
 # Menampilkan versi modul yang digunakan
 st.write("pandas version:", pd.__version__)
