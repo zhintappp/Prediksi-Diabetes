@@ -12,7 +12,7 @@ if os.path.exists(file_path):
     st.write("File found, loading the model...")
     diabetes_model = pickle.load(open(file_path, 'rb'))
 else:
-    st.write("File not found, please check the path and file name."
+    st.write("File not found, please check the path and file name.")
              
 #membaca model 
 #diabetes_model = pickle.load(open('Diabetes prediction/diabetes_model.pkl', 'rb'))
