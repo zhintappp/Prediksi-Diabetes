@@ -1,6 +1,15 @@
 import pickle
 import streamlit as st
-    
+import os
+
+model_path = 'diabetes_model.pkl'
+
+if os.path.exists(model_path):
+    with open(model_path, 'rb') as file:
+        diabetes_model = pickle.load(file)
+else:
+    raise FileNotFoundError(f"{model_path} not found. Please upload the file.")
+
 #membaca model 
 diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
 
