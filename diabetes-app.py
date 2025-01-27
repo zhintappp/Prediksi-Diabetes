@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import pandas as pd
-import matplotlib
+
 import numpy as np
 from joblib import load
 
