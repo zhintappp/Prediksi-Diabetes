@@ -18,7 +18,7 @@ else:
 #diabetes_model = pickle.load(open('Diabetes prediction/diabetes_model.pkl', 'rb'))
 
 #judul web 
-#st.title('Diabetes Prediction')
+st.title('Diabetes Prediction')
 
 col1, col2 = st.columns(2)
 
