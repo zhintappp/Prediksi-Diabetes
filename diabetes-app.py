@@ -1,6 +1,9 @@
 import pickle 
 import streamlit as st 
+import sys
 
+# Menampilkan path Python yang digunakan oleh Streamlit
+st.write(sys.executable)
 
 #membaca model 
 diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
