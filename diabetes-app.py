@@ -1,11 +1,12 @@
-import os
+iimport os
 import streamlit as st
 import pandas as pd
 import numpy as np
 
-# Menggunakan pip untuk memastikan joblib terinstal
+# Menggunakan subprocess untuk menginstal joblib jika belum ada
 import subprocess
 subprocess.check_call(["pip", "install", "joblib"])
+
 from joblib import load
 
 # Menampilkan versi modul yang digunakan
