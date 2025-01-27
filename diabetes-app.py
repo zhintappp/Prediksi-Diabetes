@@ -2,18 +2,15 @@ import os
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+# Menggunakan pip untuk memastikan joblib terinstal
+import subprocess
+subprocess.check_call(["pip", "install", "joblib"])
 from joblib import load
 
 # Menampilkan versi modul yang digunakan
 st.write("pandas version:", pd.__version__)
 st.write("numpy version:", np.__version__)
-
-# Menggunakan try-except untuk impor matplotlib dan menampilkan pesan yang jelas
-try:
-    import matplotlib
-    st.write("matplotlib version:", matplotlib.__version__)
-except ModuleNotFoundError:
-    st.write("matplotlib is not installed. Please check the requirements.txt file.")
 
 # Menggunakan try-except untuk impor sklearn dan menampilkan pesan yang jelas
 try:
@@ -30,11 +27,7 @@ st.write(f"Trying to open file at: {file_path}")
 
 if os.path.exists(file_path):
     st.write("File found, loading the model...")
-    # Coba memuat model menggunakan joblib
-    try:
-        diabetes_model = load(file_path)
-    except:
-        diabetes_model = pickle.load(open(file_path, 'rb'))
+    diabetes_model = load(file_path)
 else:
     st.write("File not found, please check the path and file name.")
     
