@@ -1,11 +1,15 @@
 import streamlit as st
 import os
 import pickle
+import sys
 
-import streamlit as st
+# Cek versi Python
+print(f"Python version: {sys.version}")
+print(f"Current working directory: {os.getcwd()}")
+
 import sklearn
+print(f"Scikit-learn version: {sklearn.__version__}")
 
-st.write(f"Scikit-learn version: {sklearn.__version__}")
 
 
 # Fungsi untuk memuat model
