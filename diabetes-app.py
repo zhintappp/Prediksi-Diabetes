@@ -1,6 +1,17 @@
-import pickle 
-import streamlit as st 
 import os
+import pickle
+import streamlit as st
+import sklearn
+import pandas as pd
+import matplotlib
+import numpy as np
+from joblib import load
+
+# Menampilkan versi modul yang digunakan
+st.write("scikit-learn version:", sklearn.__version__)
+st.write("pandas version:", pd.__version__)
+st.write("matplotlib version:", matplotlib.__version__)
+st.write("numpy version:", np.__version__)
 
 current_path = os.getcwd()
 st.write(f"Current working directory: {current_path}")
@@ -10,7 +21,11 @@ st.write(f"Trying to open file at: {file_path}")
 
 if os.path.exists(file_path):
     st.write("File found, loading the model...")
-    diabetes_model = pickle.load(open(file_path, 'rb'))
+    # Coba memuat model menggunakan joblib
+    try:
+        diabetes_model = load(file_path)
+    except:
+        diabetes_model = pickle.load(open(file_path, 'rb'))
 else:
     st.write("File not found, please check the path and file name.")
              
