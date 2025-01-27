@@ -1,14 +1,28 @@
-import pickle
 import streamlit as st
 import os
+import pickle
 
-model_path = 'diabetes_model.pkl'
+# Fungsi untuk memuat model
+def load_model():
+    model_path = 'diabetes_model.pkl'
 
-if os.path.exists(model_path):
-    with open(model_path, 'rb') as file:
-        diabetes_model = pickle.load(file)
-else:
-    raise FileNotFoundError(f"{model_path} not found. Please upload the file.")
+    if not os.path.exists(model_path):
+        st.error(f"File {model_path} tidak ditemukan. Harap tambahkan file model ke direktori proyek.")
+        return None
+
+    try:
+        with open(model_path, 'rb') as file:
+            model = pickle.load(file)
+        st.success("Model berhasil dimuat!")
+        return model
+    except Exception as e:
+        st.error(f"Gagal memuat model: {e}")
+        return None
+
+# Muat model
+diabetes_model = load_model()
+if not diabetes_model:
+    st.stop()  # Hentikan aplikasi jika model gagal dimuat
 
 #membaca model 
 diabetes_model = pickle.load(open('diabetes_model.pkl', 'rb'))
